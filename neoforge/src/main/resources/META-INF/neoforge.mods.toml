@@ -1,0 +1,38 @@
+modLoader = "javafml"
+loaderVersion = "[2,)"
+#issueTrackerURL = ""
+license = "Unlicense"
+
+[[mods]]
+modId = "binding_agent"
+version = "${version}"
+displayName = "Binding Agent"
+authors = "Pickle"
+description = '''
+
+'''
+#logoFile = ""
+
+[[dependencies.binding_agent]]
+modId = "neoforge"
+type = "required"
+versionRange = "[21,)"
+ordering = "NONE"
+side = "BOTH"
+
+[[dependencies.binding_agent]]
+modId = "minecraft"
+type = "required"
+versionRange = "[1.21.11,)"
+ordering = "NONE"
+side = "BOTH"
+
+[[dependencies.binding_agent]]
+modId = "architectury"
+type = "required"
+versionRange = "[19.0.1,)"
+ordering = "AFTER"
+side = "BOTH"
+
+[[mixins]]
+config = "binding_agent.mixins.json"
