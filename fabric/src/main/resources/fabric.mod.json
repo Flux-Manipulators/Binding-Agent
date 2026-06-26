@@ -15,10 +15,10 @@
   "environment": "*",
   "entrypoints": {
     "main": [
-      "net.picklestring.binding_agent.fabric.Binding_agentFabric"
+      "net.lunacatgirl.binding_agent.fabric.Binding_agentFabric"
     ],
     "client": [
-      "net.picklestring.binding_agent.fabric.client.Binding_agentFabricClient"
+      "net.lunacatgirl.binding_agent.fabric.client.Binding_agentFabricClient"
     ]
   },
   "mixins": [
