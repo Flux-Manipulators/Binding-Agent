@@ -9,7 +9,7 @@ import net.minecraft.network.chat.Component;
 import net.minecraft.server.level.ServerPlayer;
 import net.picklestring.binding_agent.api.attachment.PlayerAttachments;
 import net.picklestring.binding_agent.debug.BindingAgentDebug;
-import net.picklestring.binding_agent.test.TestIntAttachment;
+import net.picklestring.binding_agent.inbuilt.IntAttachment;
 
 public final class BindingAgentTestCommand {
     private BindingAgentTestCommand() {
@@ -36,7 +36,7 @@ public final class BindingAgentTestCommand {
 
     private static int getMana(CommandSourceStack source) throws CommandSyntaxException {
         ServerPlayer player = source.getPlayerOrException();
-        TestIntAttachment attachment = PlayerAttachments.get(player, BindingAgentDebug.MANA);
+        IntAttachment attachment = PlayerAttachments.get(player, BindingAgentDebug.MANA);
         int value = attachment.value();
         source.sendSuccess(() -> Component.literal("Mana attachment value: " + value), false);
         return value;
@@ -44,7 +44,7 @@ public final class BindingAgentTestCommand {
 
     private static int setMana(CommandSourceStack source, int value) throws CommandSyntaxException {
         ServerPlayer player = source.getPlayerOrException();
-        TestIntAttachment attachment = PlayerAttachments.get(player, BindingAgentDebug.MANA);
+        IntAttachment attachment = PlayerAttachments.get(player, BindingAgentDebug.MANA);
         attachment.setValue(value);
         source.sendSuccess(() -> Component.literal("Set mana attachment to " + value), false);
         return value;
